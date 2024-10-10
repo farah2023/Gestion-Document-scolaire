@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #334e64;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.profile-container {
+    position: relative;
+    background-color: #fff;
+    /* width: 800px; */
+    /* height         :min-content; */
+    padding: 80px 50px 20px;
+    margin: 20px 5px 20px 10px;
+    /* margin-left: 300px; */
+    border-radius: 12px;
+    box-shadow: 0 0 60px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.img-container {
+    width: 200px;
+    height: 250px;
+    /* overflow: hidden; */
+    /* margin-left: 90px; */
+    border: 5px solid #fd7e14;
+    /* border-radius: 100%; */
+    /* box-shadow: 0 8px 55px #fd7e14; */
+    /* position: absolute; */
+    /* top: 30px; */
+    transform: translate(-10%, -20%);
+}
+
+.img-container img {
+    width: 100%;
+    max-width: 100%;
+    /* transform: scale(1.1); */
+}
+
+.info {
+    margin-bottom: 3px;
+}
+
+.info i {
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+.place {
+    margin-bottom: 20px;
+}
+
+.full-name {
+    /* width: max-content; */
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fd7e14;
+}
+
+.posts-info {
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    /* text-align: center; */
+}
+
+.posts-info span {
+    /* display: block; */
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.action {
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    /* border-radius: 50px; */
+    padding: 5px 17px;
+    margin-top: 30px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+    /* text-transform: uppercase; */
+    font-size: 10px;
+    font-weight: bold;
+    /* letter-spacing: 1px; */
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.pip {
+    display: flex;
+    gap: 20px;
+}
+
+.action.message {
+    background-color: #fd7e14;
+    width: 200px;
+}
+
+.part_profile {
+    background-color: #fd7e14;
+    margin-top: -20px;
+    height: 30px;
+    width: 70px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.action:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+.part_profile:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+.services-container {
+    margin-top: 20px;
+}
+
+.service-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-box {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    /* Adjust the width as needed */
+}
+
+.service-box p {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.service-box button {
+    background-color: #fd7e14;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.service-box button:hover {
+    background-color: #fd7e14;
+}
+
+a.icon-link .fas {
+    color: #fd7e14;
+    /* Orange */
+    transition: color 0.3s ease;
+    /* Transition de couleur fluide */
+}
+
+a.icon-link:hover .fas {
+    color: #fd7e14;
+    /* Une teinte plus foncée d'orange au survol */
+}
+
+.icon-link {
+    display: block;
+    /* Transforme l'élément en bloc pour permettre le centrage */
+    margin: 0 auto;
+    /* Centre l'icône horizontalement dans son conteneur */
+    color: #fd7e14;
+    /* Couleur orange pour l'icône */
+    font-size: 1.5rem;
+    /* Taille plus grande de l'icône */
+    cursor: pointer;
+    /* Curseur de pointeur pour indiquer qu'il s'agit d'un élément cliquable */
+    text-align: center;
+    /* Centre le texte/icon à l'intérieur du lien si nécessaire */
+}
+
+.comment-form {
+    max-width: 300px;
+    /* Définit une largeur maximale pour le formulaire */
+    margin: 20px auto;
+    /* Centre le formulaire horizontalement et ajoute une marge */
+    /* padding: 20px; */
+    /* Ajoute un padding autour des éléments du formulaire */
+    /* border: 1px solid #ccc; */
+    /* Ajoute une bordure subtile */
+    border-radius: 10px;
+    /* Arrondit les coins */
+    background-color: #f9f9f9;
+    /* Couleur de fond légère */
+}
+
+.comment-form label {
+    display: block;
+    /* Rend le label un bloc pour qu'il occupe toute la largeur */
+    margin-bottom: 5px;
+    /* Espacement sous le label */
+    font-weight: bold;
+    /* Met le texte en gras */
+}
+
+.comment-form input,
+.comment-form textarea,
+.comment-form select {
+    width: 100%;
+    /* Assure que les inputs prennent toute la largeur disponible */
+    padding: 8px;
+    /* Ajoute un padding à l'intérieur des inputs */
+    margin-bottom: 10px;
+    /* Espacement entre les inputs */
+    /* border: 1px solid #ccc; */
+    /* Bordure des inputs */
+    border-radius: 4px;
+    /* Arrondit les coins des inputs */
+}
+
+.comment-form button {
+    background-color: #fd7e14;
+    ;
+    /* Couleur de fond du bouton */
+    color: white;
+    /* Couleur du texte du bouton */
+    border: none;
+    /* Supprime la bordure du bouton */
+    padding: 10px 20px;
+    /* Padding du bouton */
+    border-radius: 5px;
+    /* Arrondit les coins du bouton */
+    cursor: pointer;
+    /* Change le curseur en pointeur */
+    font-size: 16px;
+    /* Taille du texte du bouton */
+}
+
+.comment-form button:hover {
+    background-color: #fd7e14;
+    /* Changement de couleur au survol */
+}

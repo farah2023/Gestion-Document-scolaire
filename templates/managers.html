@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+
+<!-- Mirrored from www.madebydesignesia.com/themes/rentaly/account-dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 15:36:54 GMT -->
+
+<head>
+    <title>Managers</title>
+    <link rel="icon" href="{% static 'images/icon.png' %}" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Rentaly - Multipurpose Vehicle Car Rental Website Template" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
+    <style>
+        .image-square {
+        width: 100px; /* Modifier selon la taille souhaitée */
+        height: 100px; /* Modifier selon la taille souhaitée */
+        overflow: hidden; /* Pour s'assurer que l'image ne dépasse pas les limites du cadre */
+        border: 1px solid #ccc; /* Optionnel : ajoute une bordure */
+        border-radius: 5px; /* Optionnel : arrondit les coins */
+    }
+    
+    .image-square img {
+        width: 100%;
+        height:  100px;
+        display: block;
+    }
+    </style>
+    <!-- CSS Files
+    ================================================== -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet" type="text/css" id="mdb">
+    <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static  'css/coloring.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-qjVp+s7rPtn7WjlA97BVRB/y9bbGcxXuXwHVlW9g+0Jt5W1roW0hoBwWsgwMK6WpsKgtxTwU6qntq2YNlCXvZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ 
+    <!-- color scheme -->
+    <link id="colors" href="{% static 'colors/scheme-01.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  
+
+                          
+    <div id="wrapper">
+
+        <!-- page preloader begin -->
+        <div id="de-preloader"></div>
+        <!-- page preloader close -->
+
+        <!-- header begin -->
+
+        <header class="transparent scroll-light has-topbar">
+            
+          
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex sm-pt10">
+                            <div class="de-flex-col">
+                                <div class="de-flex-col">
+                                    <!-- logo begin -->
+                                    <div id="logo">
+                                        <a href="{% url 'home' %}">
+                                            <img class="logo-1" src="{% static 'images/logo.png' %}" alt="">
+                                            <img class="logo-2" src="{% static 'images/logo.png' %}" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- logo close -->
+                                </div>
+                            </div>
+                            <div class="de-flex-col header-col-mid">
+                                <ul id="mainmenu">
+                                    <li><a class="menu-item" href="{% url 'home' %}" style="color:black;">Home</a>
+
+                                    </li>
+                                    <li><a class="menu-item" href="{% url 'cars' %} " style="color:black;">Cars</a>
+
+                                    </li>
+                                    {% comment %} <li><a class="menu-item" href="quick-booking.html">Booking</a>
+
+                                    </li> {% endcomment %}
+                                    <li><a class="menu-item" href="{% url 'about' %}" style="color:black;" >About Us</a>
+                                    </li>
+                                    <li><a class="menu-item" href="{% url 'contact' %}" style="color:black;">Contact</a>
+                                    
+                                    </li>
+                                </ul>
+                            </div>
+                                   
+                       
+
+
+
+                    
+                            <div class="de-flex-col">
+                                <div class="menu_side_area">
+                                    <div class="de-login-menu">
+
+                                        <span id="de-click-menu-profile" class="de-menu-profile">
+                                            <img src="{% static '../media/' %}{{ admin.image }}" class="img-fluid" alt="">
+                                        </span>
+
+
+
+                                        <div id="de-submenu-profile" class="de-submenu">
+                                            <div class="d-name">
+                                                <h4>{{ admin.username }}</h4>
+                                                <span class="text-gray">{{ admin.email }}</span>
+                                            </div>
+
+                                            <div class="d-line"></div>
+
+                                            <ul class="menu-col">
+                                             
+                                                <li><a href="{% url 'signout' %}"><i class="fa fa-sign-out"></i>Sign Out</a></li>
+                                            </ul>
+                                        </div>
+                                        <span id="menu-btn"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </header>
+    <!-- header close -->
+    <br>
+    <br>
+
+<br>
+<br>
+
+        <!-- header close -->
+        <!-- content begin -->
+        {% comment %} <div class="no-bottom no-top zebra" id="content">
+            <div id="top"></div>
+
+            <!-- section begin -->
+            <section id="subheader" class="jarallax text-light">
+                <img src="{% static 'images/background/20.jpg' %}" class="jarallax-img" alt="">
+                <div class="center-y relative text-center"> 
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h1>Managers</h1>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </section> {% endcomment %}
+            <!-- section close -->
+
+            
+            <section id="section-settings" class="bg-gray-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 mb30">
+                            <div class="card padding30 rounded-5">
+                                <div class="profile_avatar">
+                                    <div class="profile_img">
+                                     
+                                        <img src="{% static '../media/' %}{{ admin.image }}">
+                                      
+                                      
+                                    </div>
+                                    <div class="profile_name">
+                                        <h4>
+                                            {{ admin.username }}
+                                            <span class="profile_username text-gray"></span>
+                                        </h4>
+                                    </div>
+                                </div>
+
+                                <div class="spacer-20"></div>
+                                <ul class="menu-col">
+                                    {% comment %} <li><a href="{% url 'dashboard' %}" ><i class="fa fa-home"></i>Dashboard</a></li> {% endcomment %}
+                                    <li><a href="{% url 'dashboard_Admin' %}" class="active"><i class="fa fa-home"></i>Dashboard</a></li>
+                                    <li><a href="{% url 'add_manager' %}"><i class="fa fa-user-tie"></i>Add new manager</a></li>    
+                                      <li><a href="{% url 'cars' %}"><i class="fa fa-car"></i>Cars</a>
+                                    </li>
+                                    <li><a href="{% url 'signout' %}"><i class="fa fa-sign-out"></i>Sign Out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-9">
+                            <div class="card padding30 rounded-5 mb25">
+                                            <div class="row">
+                                                <div class="col-md-8 offset-md-2">
+                                                <h3>Modify a  Manager</h3>
+
+                                                {% if manager.image_path %}
+                                                <div class="image-square">
+                                                <span id="de-click-menu-profile" class="">
+                                                 
+                                                    <img src=" {% static '../media/' %}{{ manager.image_path }}" class="" alt="hllo">
+                                                </div>
+                                                </span>
+                                            {% endif %}
+                                            
+
+                                               
+                     {% for message in messages %}
+    {% if message.tags == 'error' %}
+        <div class="alert alert-danger">
+            {{ message }}
+        </div>
+    {% endif %}
+{% endfor %}
+                                                
+
+                                                
+                                                <div class="spacer-10"></div>
+                    
+                                                <form name="contactForm" id='contact_form' class="form-border" method="post" action=" {% url 'update_manager' manager.id %}" enctype="multipart/form-data">
+                                                    {% csrf_token %}
+                                                    <div class="row">
+                                 
+                                                        <div class="col-md-6">
+                                                            <div class="field-set">
+                                                                <label> First name:</label>
+                                                                <input type='text' name='name' id='name' value='{{ manager.name }}' class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="field-set">
+                                                                <label> Last name:</label>
+                                                                <input type='text' name='lastname' id='lastname' value=' {{ manager.lastname }}' class="form-control">
+                                                            </div>
+                                                        </div>
+                    
+                                                        <div class="col-md-6">
+                                                            <div class="field-set">
+                                                                <label>Email Address:</label>
+                                                                <input type='text' name='email' id='email' value=' {{ manager.email }}'  class="form-control">
+                                                            </div>
+                                                        </div>
+                    
+                                                        <div class="col-md-6">
+                                                            <div class="field-set">
+                                                                <label>Choose a Username:</label>
+                                                                <input type='text' name='username' id='username'value=' {{ manager.username }}'  class="form-control">
+                                                            </div>
+                                                        </div>
+                    
+                                                        <div class="col-md-6">
+                                                            <div class="field-set">
+                                                                <label>Phone:</label>
+                                                                <input type='text' name='phone' id='phone' value=' {{ manager.phone }}'  class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="field-set">
+                                                                <label>Photo:</label>
+                                                                <input type='file' name='photo' id='photo' class="form-control">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="field-set">
+                                                                <label>  Password:</label>
+                                                                <input type='password' name='old_password' id='old_password' class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="field-set">
+                                                                <label> New Password:</label>
+                                                                <input type='password' name='password' id='password' class="form-control">
+                                                            </div>
+                                                        </div>
+                    
+                                                        <div class="col-md-6">
+                                                            <div class="field-set">
+                                                                <label>Re-enter Password:</label>
+                                                                <input type='password' name='re-password' id='re-password' class="form-control">
+                                                            </div>
+                                                        </div>
+                                                   
+
+                                                        <div class="col-md-12">
+                                                                            
+                                                            <div id='submit' class="pull-left">
+                                                                <br/>              
+                                                                <input type='submit'  value='Modify' class="btn-main color-2">
+                                                            </div>
+                    
+                    
+                                                        </div>
+                    
+                                                    </div>
+                                                </form>
+                    
+                                            </div>
+                                        </div>
+                      
+                               
+                              
+
+                        
+                               
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- content close -->
+
+       <!-- content close -->
+       <a href="#" id="back-to-top"></a>
+       <!-- footer begin -->
+       <footer class="text-light">
+           <div class="container">
+               <div class="row g-custom-x">
+                   <div class="col-lg-3">
+                       <div class="widget">
+                           <h5>About Rentaly</h5>
+                           <p>Where quality meets affordability. We understand the importance of a smooth and enjoyable
+                               journey without the burden of excessive costs. That's why we have meticulously crafted our
+                               offerings to provide you with top-notch vehicles at minimum expense.</p>
+                       </div>
+                   </div>
+   
+                   <div class="col-lg-3">
+                       <div class="widget">
+                           <h5>Contact Info</h5>
+                           <address class="s1">
+                               <span><i class="id-color fa fa-map-marker fa-lg"></i>08 W 36th St, New York, NY 10001</span>
+                               <span><i class="id-color fa fa-phone fa-lg"></i>+1 333 9296</span>
+                               <span><i class="id-color fa fa-envelope-o fa-lg"></i><a
+                                       href="mailto:contact@example.com">contact@example.com</a></span>
+                               <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="#">Download
+                                       Brochure</a></span>
+                           </address>
+                       </div>
+                   </div>
+   
+                   <div class="col-lg-3">
+                       <h5>Quick Links</h5>
+                       <div class="row">
+                           <div class="col-lg-6">
+                               <div class="widget">
+                                   <ul>
+                                       <li><a href="#">About</a></li>
+                                       <li><a href="#">Blog</a></li>
+                                       <li><a href="#">Careers</a></li>
+                                       <li><a href="#">News</a></li>
+                                       <li><a href="#">Partners</a></li>
+                                   </ul>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+   
+                   <div class="col-lg-3">
+                       <div class="widget">
+                           <h5>Social Network</h5>
+                           <div class="social-icons">
+                               <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+                               <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                               <a href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+                               <a href="#"><i class="fab fa-pinterest fa-lg"></i></a>
+                               <a href="#"><i class="fas fa-rss fa-lg"></i></a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="subfooter">
+               <div class="container">
+                   <div class="row">
+                       <div class="col-md-12">
+                           <div class="de-flex">
+                               <div class="de-flex-col">
+                                   <a href="index.html">
+                                       Copyright 2024 - Rentaly by soukaina&farah
+                                   </a>
+                               </div>
+                               <ul class="menu-simple">
+                                   <li><a href="#">Terms &amp; Conditions</a></li>
+                                   <li><a href="#">Privacy Policy</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </footer>
+       <!-- footer close -->
+       </div>
+   
+   
+       <!-- Javascript Files
+       ================================================== -->
+       <script src="{% static 'js/plugins.js' %}"></script>
+       <script src="{% static 'js/designesia.js' %}"></script>
+       <script
+           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgiM7ogCAA2Y5pgSk2KXZfxF5S_1jsptA&amp;libraries=places&amp;callback=initPlaces"
+           async="" defer=""></script>
+   
+   </body>
+   
+   
+   <!-- Mirrored from www.madebydesignesia.com/themes/rentaly/02_dark-index-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Apr 2024 15:31:31 GMT -->
+   
+   </html>

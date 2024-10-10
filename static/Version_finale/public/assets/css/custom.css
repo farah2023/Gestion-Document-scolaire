@@ -1,0 +1,45 @@
+/* Table Styling */
+.table {
+    width: 100%;
+    margin-bottom: 0; /* Removes default margin-bottom */
+    border-collapse: collapse; /* Ensures that table borders are collapsed into a single border */
+}
+
+.table th, .table td {
+    vertical-align: middle; /* Aligns content vertically in the middle of the cell */
+    text-align: left; /* Aligns content to the left; adjust as needed */
+    padding: 15px; /* Provides padding within the cells; adjust as needed */
+    border-top: 1px solid #dee2e6; /* Adds a top border to all cells */
+}
+
+/* Header row specific styles */
+.table thead th {
+    border-bottom: 2px solid #dee2e6; /* Adds a thicker border to header cells */
+}
+
+/* Zebra striping for rows, optional */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect for rows, optional */
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling for profile images */
+.img-fluid.rounded-circle {
+    display: block; /* Changes display to block, ensuring it takes up the full space */
+    margin: 0 auto; /* Centers the image within the cell if cell is wider than image */
+}
+
+/* Adjust the line height for consistency */
+.table th, .table td {
+    line-height: 1.5; /* Standard line height for better readability and alignment */
+}
+
+/* Ensure buttons are aligned */
+.btn {
+    white-space: nowrap; /* Prevents the text inside the button from wrapping */
+    vertical-align: middle; /* Aligns the button vertically */
+}
